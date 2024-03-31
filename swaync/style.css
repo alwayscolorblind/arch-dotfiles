@@ -23,7 +23,7 @@
 
 .notification-row:focus,
 .notification-row:hover {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0);
 }
 
 .notification {
@@ -184,7 +184,22 @@
 }
 
 .control-center {
-  background: @cc-bg;
+  background: rgba(0, 0, 0, 0.5);
+  margin-right: 0;
+  margin-left: 0;
+  animation: 1s control-center-appear;
+}
+
+@keyframes control-center-appear {
+  from {
+    margin-left: -350px;
+    margin-right: 350px;
+  }
+
+  to {
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
 
 .control-center-list {
